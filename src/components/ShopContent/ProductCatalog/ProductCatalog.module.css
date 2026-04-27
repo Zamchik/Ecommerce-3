@@ -1,0 +1,29 @@
+.container_productCatalog {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+    gap: 24px;
+    overflow-y: auto;
+}
+
+.container_productCard {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    justify-items: center;
+    padding: 20px;
+    flex: 1;
+    align-content: start;
+}
+
+.container_productSort {
+    width: 100%;
+    min-height: 42px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 46px;
+}

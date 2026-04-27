@@ -1,0 +1,16 @@
+.select {
+    width: 222px;
+    height: 42px;
+    opacity: 1;
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+.count {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: #717182;
+}

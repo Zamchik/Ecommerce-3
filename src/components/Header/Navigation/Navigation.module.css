@@ -1,0 +1,103 @@
+.container_header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.logoLink {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.techstore {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  white-space: nowrap;
+}
+
+.tabs_row {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+}
+
+.navigation_right {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 16px;
+  margin-left: auto;
+}
+
+.tab {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  white-space: nowrap;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  color: #717182;
+  transition: color 0.2s;
+}
+
+.tab:hover {
+  color: #000000;
+}
+
+.active {
+  color: #000000;
+}
+
+.icon_Button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: inline-flex;
+}
+
+.cart_Badge {
+  
+}
+
+@media (max-width: 639px) {
+  .container_header {
+    gap: 12px;
+  }
+
+  .logoLink {
+    order: 1;
+  }
+
+  .navigation_right {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .tabs_row {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+    border-top: 1px solid #5a5a5a;
+  }
+
+  .tab {
+    flex: 1;
+    text-align: center;
+  }
+}

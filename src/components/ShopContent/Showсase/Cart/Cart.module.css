@@ -1,0 +1,298 @@
+.cart {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.cartTitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 36px;
+  color: #030213;
+  margin: 0;
+}
+
+.cartContent {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.cartList {
+  flex: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.cartItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.cartItem:last-child {
+  border-bottom: none;
+}
+
+.itemImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.itemInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.itemName {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #030213;
+}
+
+.itemBrand {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #666;
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+}
+
+.qtyBtn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  font-size: 16px;
+  color: #030213;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.qtyBtn:hover {
+  background: #f0f0f0;
+  border-color: #030213;
+}
+
+.qtyValue {
+  min-width: 30px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.removeBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #999;
+  padding: 4px;
+  transition: color 0.2s;
+}
+
+.removeBtn:hover {
+  color: #D4183D;
+}
+
+.itemTotal {
+  min-width: 100px;
+  text-align: right;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #030213;
+  white-space: nowrap;
+}
+
+.summary {
+  width: 320px;
+  flex-shrink: 0;
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.summaryTitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: #030213;
+  margin: 0;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #555;
+}
+
+.summaryRow.total {
+  font-weight: 600;
+  font-size: 16px;
+  color: #030213;
+  border-top: 1px solid #ddd;
+  padding-top: 12px;
+  margin-top: 4px;
+}
+
+.summaryLabel {
+  font-weight: 400;
+}
+
+.summaryValue {
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.primaryBtn {
+  width: 100%;
+  height: 48px;
+  background: #030213;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.primaryBtn:hover {
+  background: #1a1a2e;
+}
+
+.secondaryBtn {
+  width: 100%;
+  height: 48px;
+  background: transparent;
+  color: #030213;
+  border: 1px solid #030213;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.secondaryBtn:hover {
+  background: #030213;
+  color: white;
+}
+
+.emptyCart {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 48px 32px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.emptyMessage {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #666;
+}
+
+@media (max-width: 1023px) {
+  .cart {
+    padding: 24px;
+  }
+
+  .cartContent {
+    flex-direction: column;
+  }
+
+  .summary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 639px) {
+  .cart {
+    padding: 16px;
+  }
+
+  .cartItem {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .itemImage {
+    width: 64px;
+    height: 64px;
+  }
+
+  .itemTotal {
+    min-width: auto;
+    width: 100%;
+    text-align: left;
+    padding-left: 76px;
+  }
+
+  .quantityControls {
+    order: 1;
+  }
+
+  .removeBtn {
+    margin-left: auto;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    height: 44px;
+    font-size: 15px;
+  }
+}

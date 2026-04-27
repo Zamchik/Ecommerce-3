@@ -2,6 +2,7 @@ import Brand from "./Brand/Brand";
 import PriceRange from "./PriceRange/PriceRange";
 import SpecialDeal from "./SpecialDeal/SpecialDeal";
 import styles from "./Sidebar.module.css";
+import { useState } from "react";
 
 const Sidebar = ({
   brands,
@@ -13,6 +14,9 @@ const Sidebar = ({
   setMaxPrice,
   onApply,
 }) => {
+
+  const [showBanner, setShowBanner] = useState(true)
+
   return (
     <aside className={styles.sidebar}>
       <div className={styles.container_filters}>
@@ -34,9 +38,11 @@ const Sidebar = ({
           </button>
         </div>
       </div>
-      <section className={styles.register_banner}>
-        <SpecialDeal />
-      </section>
+      {showBanner && (
+        <section className={styles.register_banner}>
+          <SpecialDeal onClose={() => setShowBanner(false)} />
+        </section>
+      )}
     </aside>
   );
 };

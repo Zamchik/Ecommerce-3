@@ -52,6 +52,7 @@
 .offer_expire {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   width: auto;
   height: auto;
   font-family: 'Inter', sans-serif;
@@ -79,7 +80,7 @@
   top: -5px;
   width: auto;
   height: 28px;
-  font-family: Liberation Mono, monospace;
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 28px;

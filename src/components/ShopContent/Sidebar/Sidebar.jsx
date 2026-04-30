@@ -3,6 +3,8 @@ import PriceRange from "./PriceRange/PriceRange";
 import SpecialDeal from "./SpecialDeal/SpecialDeal";
 import styles from "./Sidebar.module.css";
 import { useState } from "react";
+import WeatherWidget from "./WeatherWidget/WeatherWidget";
+import Modal from "./ModalWindow/Modal";
 
 const Sidebar = ({
   brands,
@@ -15,7 +17,9 @@ const Sidebar = ({
   onApply,
 }) => {
 
-  const [showBanner, setShowBanner] = useState(true)
+  const [showSpecialDeal, setShowSpecialDeal] = useState(true);
+const [showWeather, setShowWeather] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <aside className={styles.sidebar}>
@@ -38,11 +42,24 @@ const Sidebar = ({
           </button>
         </div>
       </div>
-      {showBanner && (
+      {showSpecialDeal && (
         <section className={styles.register_banner}>
-          <SpecialDeal onClose={() => setShowBanner(false)} />
+          <SpecialDeal onClose={() => setShowSpecialDeal(false)} />
         </section>
       )}
+      {showWeather && (
+        <section className={styles.weather_widget}>
+          <WeatherWidget onClose={() => setShowWeather(false)} />
+        </section>
+      )}
+      <button onClick={() => setIsModalOpen(true)} className={styles.openModalBtn}>
+        Open ModalWindow
+      </button>
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <h2>Test Modal Window</h2>
+        <p>Some text</p>
+        <button onClick={() => alert('Test')}>Example Action</button>
+      </Modal>
     </aside>
   );
 };
